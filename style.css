@@ -52,12 +52,13 @@ main {
     transform: scale(0.03);
     position: relative;
     z-index: 1;
-    width: 80%;
-    height: 85%;
+    width: 100%;
+    height: 100%;
     text-align: center;
     visibility: hidden;
     transition: transform 0.3s;
     color: #c3c3cf;
+    overflow-y: auto;
 }
 
 .open-sobre {
@@ -75,7 +76,7 @@ main {
 }
 
 .eu {
-    width: 10%;
+    width: clamp(75px, 10%, 120px);
     height: 25%;
     float: left;
     border: 2px solid #363644;
@@ -87,11 +88,18 @@ main {
 }
 
 .sobre pre {
+    white-space: pre-wrap;
     padding: 25px;
-    font-size: 1.3em;
+    font-size: clamp(10px, 15px, 18px);
 }
 
 .sobre .imagem {
     width: 5%;
     height: 8%;
+}
+
+.sobreSpan {
+    position: flex;
+    width: 80%;
+    height: 85%;
 }
